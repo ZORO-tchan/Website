@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #060606;
+  --foreground: #EDE8E0;
+}
+
+html, body {
+  background-color: #060606;
+  color: #EDE8E0;
+  margin: 0;
+  padding: 0;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar matching Swiss watch aesthetics */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060606;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 160, 92, 0.25);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 160, 92, 0.45);
+}
+
+/* Subtle luxury grain */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 99;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Elegant hairline borders */
+.hairline-b {
+  border-bottom: 1px solid rgba(201, 160, 92, 0.15);
+}
+
+.hairline-t {
+  border-top: 1px solid rgba(201, 160, 92, 0.15);
+}
+
+.hairline-l {
+  border-left: 1px solid rgba(201, 160, 92, 0.15);
+}
+
+.hairline-r {
+  border-right: 1px solid rgba(201, 160, 92, 0.15);
+}
+
+.hairline-all {
+  border: 1px solid rgba(201, 160, 92, 0.15);
+}
+
+.hairline-subtle {
+  border-color: rgba(255, 255, 255, 0.06);
+}
